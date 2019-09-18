@@ -2,7 +2,7 @@
 
 The ExpressTuner is a project created to eliminate manual order re-processing 
 through a point of sale (POS) system for customer subscriptions that failed to renew
-due to a credit card decline. In our department this process is referred to “Rolling” 
+due to credit card decline. In our department this process is referred to “Rolling” 
 accounts. This version of the project has been striped of API's and sensitive information.
 
 <b>Three</b> steps to using ExpressTuner.
