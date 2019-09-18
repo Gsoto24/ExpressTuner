@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block head %}
+    <!--External js for run_expresstuner-->
+    <script type="text/javascript" src="/static/js/run_expresstuner.js"></script>
+    <!--External js for run_expresstuner-->
+{% endblock head %}
+
+
+{% block body %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="ui segment raised" style="width: 400px; margin: auto;">
+        <div class="ui horizontal divider">
+        1) Download Roll List
+        </div>
+
+        <a href="#"><p onclick="getattempting()" style="text-align:center;">Download Scheduled List Here</p></a>
+
+        <div class="ui horizontal divider">
+        2) Roll the Customer List
+        </div>
+
+        <form id='express_form' class="ui form" method="POST" enctype="multipart/form-data">{% csrf_token %}
+			<div class="field">
+				<label>Username</label> <input id='username_input' name="username" placeholder="Username" type="text">
+			</div>
+			<div class="field">
+				<label>Password</label> <input id='password_input' name="password" placeholder="Password" type="password">
+			</div>
+			<div>
+				<label class="ui icon button" for="file"><i class="file icon"></i> Upload CSV</label>
+				<input name="csv_file" id="file" style="display:none" type="file">
+			</div>
+			<br>
+			<div style="display: flex; justify-content: center;">
+				<button class="ui button positive " style="margin: 0 auto;" type="submit">Submit</button>
+			</div>
+		</form>
+
+		<br>
+	</div>
+{% endblock body %}
+
+
+

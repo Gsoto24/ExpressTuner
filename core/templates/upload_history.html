@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block head %}
+    <!--External js for Load_new_declines-->
+    <script type="text/javascript" src="/static/js/upload_history.js"></script>
+    <!--External js for Load_new_declines-->
+{% endblock head %}
+
+
+{% block body %}
+    <br>
+	<br>
+	<br>
+    <br>
+    <br>
+	<br>
+	<br>
+    <br>
+    <br>
+	<br>
+	<br>
+    <br>
+    <!--<div class="ui two column grid" style="min-width:500px;">-->
+      <!---->
+        <!--<div class="column">-->
+        <!--<div class="ui segment raised" style="width: 300px; margin: auto; text-align:center;">-->
+            <!--<h1>Scheduled Accounts</h1>-->
+            <!--<p>Accounts scheduled to roll by the date they were orignialy uploaded to ExpressTuner.</p>-->
+            <!--<form id = "optionform" method="post">{% csrf_token %}-->
+                <!--<select id="OptionDropin">-->
+                <!--</select>-->
+            <!--</form>-->
+            <!--<br>-->
+            <!--<button class="ui button positve green" id="download_csv">Download</button>-->
+	    <!--</div>-->
+      <!--</div>-->
+        <!---->
+      <!--<div class="column">-->
+        <!--<div class="ui segment raised" style="width: 300px; margin: auto; text-align:center;">-->
+            <!--<h1>Failed Rolls</h1>-->
+            <!--<p>Accounts which failed twice to roll. These accounts are ready for a phone call.</p>-->
+
+            <!--<form id = "optionform" method="post">{% csrf_token %}-->
+                <!--<select id="OptionDropin">-->
+                <!--</select>-->
+            <!--</form>-->
+            <!--<br>-->
+            <!--<button class="ui button positve green" id="download_csv">Download</button>-->
+	    <!--</div>-->
+      <!--</div>-->
+    <!---->
+    <!--</div>-->
+
+
+        <div class="ui segment raised" style=" margin: auto; text-align:center; width:800px;">
+
+            <div class="ui container" style="width:250px; float:left;">
+                <h1>Pending</h1>
+                <p>All accounts scheduled to roll on ExpressTuner.</p>
+                <!--<form id = "optionform" method="post">{% csrf_token %}-->
+                    <!--<select id="OptionDropin">-->
+                    <!--</select>-->
+                <!--</form>-->
+                <br>
+                <button class="ui button positve green" onclick="getpending()">Download</button>
+            </div>
+
+            <div class="ui container" style="float:left;width: 10px; position:relative; height:200px;">
+              <div class="ui vertical divider">
+                or
+              </div>
+            </div>
+
+            <div class="ui container" style="width:250px; float:left;">
+                <h1>Charged Rolls</h1>
+                <p>Accounts successfully rolled within the last 30 days.</p>
+                <!--<form id = "optionform" method="post">{% csrf_token %}-->
+                    <!--<select id="OptionDropin">-->
+                    <!--</select>-->
+                <!--</form>-->
+                <br>
+                <button class="ui button positve green" onclick="getcharged()">Download</button>
+            </div>
+
+            <div class="ui container" style="float:left;width: 10px; position:relative; height:200px;">
+              <div class="ui vertical divider">
+                or
+              </div>
+            </div>
+
+            <div class="ui container" style="width:250px; float:left;">
+                <h1>Failed Rolls</h1>
+                <p>Accounts which failed to roll, within last 30 days.</p>
+                <!--<form id = "optionform" method="post">{% csrf_token %}-->
+                    <!--<select id="OptionDropin">-->
+                    <!--</select>-->
+                <!--</form>-->
+                <br>
+                <button class="ui button positve green" onclick="getfailed()">Download</button>
+            </div>
+
+	    </div>
+	<br>
+	<br>
+    <br>
+	<!--<div class="ui segment raised" style="width: 400px; margin: auto; text-align:center;">-->
+		<!--<h1>Upload History</h1>-->
+		<!--<p>Get uploaded accounts by date.</p>-->
+
+		<!--<form id = "optionform" method="post">{% csrf_token %}-->
+			<!--<select id="OptionDropin">-->
+			<!--</select>-->
+		<!--</form>-->
+		<!--<button class="ui button positve green" id="download_csv">Download</button>-->
+	<!--</div>-->
+
+
+{% endblock body %}
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ExpressTuner</title>
+
+        <!--SemanticUI and Jquery-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+        <!--SemanticUI and Jquery-->
+
+          <!--Local Global Static files -->
+        <script src="/static/js/base.js"></script>
+        <!--Local Global Static files -->
+
+        {% block head %}{% endblock %}
+    </head>
+
+
+    <body style="min-width:800px;">
+
+        <!--Fixed Header-->
+        <div class="ui fixed menu" style="">
+            <div class="ui container" style="width:75%; margin:0 auto; min-width:800px;">
+                <a class="item" href="/" style="font-weight:bold;">ExpressTuner<i class="rocket icon"></i></a>
+                <a class="item" href="/howtouse" style="float:right;">How to use</a>
+                <a class="item" href="/uploadhistory" style="float:right;">Upload History</a>
+                <a class="item" href="/runexpresstuner" style="float:right;">Run ExpressTuner</a>
+                <a class="item" href="/" style="float:right;">Load New Declines</a>
+            </div>
+        </div>
+        <!--Fixed Header-->
+
+            {% block body %}
+            {% endblock body %}
+
+        <!--Fixed Footer-->
+        <div class="ui vertical footer segment form-page" style="position: absolute; bottom: 0;width: 100%; margin:0; min-width:800px;">
+            <div class="ui container" style="text-align: center;">
+                ExpressTuner 2018.
+            </div>
+        </div>
+        <!--Fixed Footer-->
+
+    </body>
+
+</html>

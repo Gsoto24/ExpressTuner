@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block head %}
+    <!--External js for Load_new_declines-->
+    <script type="text/javascript" src="/static/js/error.js"></script>
+    <!--External js for Load_new_declines-->
+{% endblock head %}
+
+
+{% block body %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<div class="ui segment raised" style="width: 400px; margin: auto; text-align:center;">
+		<h1>Something went wrong...</h1>
+        <p id="errortype_msg">{{error_msg}}</p>
+        <p>Details: <span  id="errordetails_msg">{{detail_error_msg}}</span></p>
+        <a href="{{redirectURL}}"><button class="ui button positve green">Ok</button></a>
+	</div>
+{% endblock body %}
